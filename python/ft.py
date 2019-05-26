@@ -40,6 +40,9 @@ def stft(x, nfft, sample_rate, overlap=None):
     return np.swapaxes(np.array(STFT), 0, 1), len(x) # The array is vertical, not horizontal. Note that len(x) is just the total number of samples
 
 def show_spectrogram(S, sample_rate=None, n_samples=None): # Typically n_samples is the second output len(x) of the stft function, although neither are necessary just for the raw graph
+    # S: the spectrogram output of stft() (float[][])
+    # sample_rate: sample rate of the original signal (optional, int)
+    # n_samples: the number of samples in the original signal (optional, int)
     fig = plt.figure(figsize=(8,7))
     plt.imshow(S, origin="lower") # Set the origin to the bottom left of the screen.
 
