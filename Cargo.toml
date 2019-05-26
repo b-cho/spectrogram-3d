@@ -1,0 +1,9 @@
+[package]
+name = "spectrogram-3d"
+version = "0.1.0"
+authors = ["aemino <aeminodev@gmail.com>", "bcho04 <brandon.cho@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+num = "0.2.0"
+stdweb = "0.4.17"
