@@ -1,8 +1,11 @@
 [package]
 name = "spectrogram-3d"
 version = "0.1.0"
-authors = ["aemino <aeminodev@gmail.com>", "bcho04 <brandon.cho@gmail.com>"]
+authors = ["Leo Conrad-Shah <leoconr@nuevaschool.org"]
 edition = "2018"
+
+[lib]
+crate-type = ["cdylib"]
 
 [dependencies]
 num = "0.2.0"
