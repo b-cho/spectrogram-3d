@@ -49,11 +49,11 @@ def show_spectrogram(S, sample_rate=None, n_samples=None): # Typically n_samples
     plt.xlabel("Time (sec)")
     if(sample_rate and n_samples):
         x_labels = np.round(np.linspace(0, (n_samples/sample_rate), 8), 1) # This just labels the time axis of the spectrogram -- if we know the number of samples and the sample rate, simple division allows us to find the length.
-    plt.xticks(np.round(np.linspace(0, S.shape[1], 8), 1), x_labels) # Draw the x-axis labels to the screen in equally spaced intervals across the graph, instead of at pixel numbers.
+        plt.xticks(np.round(np.linspace(0, S.shape[1], 8), 1), x_labels) # Draw the x-axis labels to the screen in equally spaced intervals across the graph, instead of at pixel numbers.
 
     plt.ylabel("Frequency (Hz)")
     if(sample_rate):
         y_labels = np.round(np.linspace(0, sample_rate/2, 8), 1) # We only graph up to sample_rate/2 Hz because of the Nyquist frequency (i.e., we can only be sure of a frequency up to half the sample rate.)
-    plt.yticks(np.round(np.linspace(0, S.shape[0], 8), 1), y_labels) # Draw the y-axis labels to the screen in equally spaced intervals across the graph, instead of at pixel numbers.
+        plt.yticks(np.round(np.linspace(0, S.shape[0], 8), 1), y_labels) # Draw the y-axis labels to the screen in equally spaced intervals across the graph, instead of at pixel numbers.
 
     plt.show() # Show the plot.
